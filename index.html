@@ -22,7 +22,6 @@
 
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -40,7 +39,7 @@
 
 
     <!-- Topbar Start -->
-    <div class="container-fluid bg-dark text-light px-0 py-1 d-none d-lg-block style="font-size: 0.82rem;" border-bottom border-primary border-opacity-25">
+    <div class="container-fluid bg-dark text-light px-0 py-1 d-none d-lg-block border-bottom border-primary border-opacity-25" style="font-size: 0.82rem;">
         <div class="row gx-0 align-items-center">
             <div class="col-lg-7 px-5 text-start">
                 <small class="me-3">
@@ -74,13 +73,12 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-3 py-lg-0">
                 <a href="index.html" class="nav-item nav-link active">Beranda</a>
-                <a href="#peta-section" class="nav-item nav-link">Peta Dinamika</a>
                 <a href="#tabel-section" class="nav-item nav-link">Tabel Data</a>
                 <a href="about.html" class="nav-item nav-link">Metodologi &amp; Data</a>
                 <a href="analisis.html" class="nav-item nav-link">Analisis Tipologi</a>
                 <a href="contact.html" class="nav-item nav-link">Peneliti &amp; Rekomendasi</a>
             </div>
-            <a href="#peta-section" class="btn btn-primary py-2 px-4 d-none d-lg-block ms-3">
+            <a href="peta/index.html" target="_blank" class="btn btn-primary py-2 px-4 d-none d-lg-block ms-3">
                 <i class="fa fa-map-marked-alt me-2"></i>Buka Peta
             </a>
         </div>
@@ -130,99 +128,6 @@
     <!-- Hero Banner End -->
 
 
-    <!-- Key Metrics / Fact Counter Start (2-Tier Balanced Grid) -->
-    <div class="container-xxl py-4">
-        <div class="container">
-            <!-- Tier 1: Agregat Provinsi Jawa Tengah -->
-            <div class="row g-4 mb-4">
-                <!-- Metrik 1: Total Desa 4G/5G 2025 -->
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="metric-card-modern border-accent-primary h-100 d-flex align-items-center p-4">
-                        <div class="metric-icon-box bg-primary bg-opacity-10 text-primary me-4">
-                            <i class="fa fa-signal"></i>
-                        </div>
-                        <div class="flex-grow-1">
-                            <div class="d-flex justify-content-between align-items-baseline mb-1">
-                                <span class="metric-label mb-0">Total Desa/Kelurahan Bersinyal 4G/5G (2025)</span>
-                                <span class="metric-pill-tag bg-primary bg-opacity-10 text-primary">Provinsi Jateng</span>
-                            </div>
-                            <div class="metric-val-large text-dark mb-1">8.333 <span class="fs-6 fw-normal text-muted">Desa</span></div>
-                            <div class="text-muted small">
-                                <i class="fa fa-arrow-up text-success me-1"></i> Meningkat dari <strong>8.316 desa</strong> pada tahun 2024
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Metrik 2: Pertumbuhan Agregat Bersih -->
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="metric-card-modern border-accent-success h-100 d-flex align-items-center p-4">
-                        <div class="metric-icon-box bg-success bg-opacity-10 text-success me-4">
-                            <i class="fa fa-chart-line"></i>
-                        </div>
-                        <div class="flex-grow-1">
-                            <div class="d-flex justify-content-between align-items-baseline mb-1">
-                                <span class="metric-label mb-0">Pertumbuhan Bersih Agregat Sinyal</span>
-                                <span class="metric-pill-tag bg-success bg-opacity-10 text-success">&Delta; Positif</span>
-                            </div>
-                            <div class="metric-val-large text-success mb-1">+17 <span class="fs-6 fw-normal text-muted">Desa Baru</span></div>
-                            <div class="text-muted small">
-                                <i class="fa fa-check-circle text-success me-1"></i> Ekspansi jaringan aktif di wilayah barat dan selatan Jawa Tengah
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tier 2: Tiga Tipologi Spasial Jawa Tengah (Grid 3 Simetris) -->
-            <div class="row g-4 text-center">
-                <!-- Tipologi 1: Peningkatan -->
-                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="metric-card-modern border-accent-peningkatan h-100 p-4">
-                        <div class="badge-peningkatan d-inline-block px-3 py-1 rounded-pill mb-3 fw-bold small">
-                            <i class="fa fa-arrow-up me-1"></i> Peningkatan (&Delta; &gt; 0)
-                        </div>
-                        <div class="metric-val-large text-peningkatan mb-1">15 <span class="fs-6 fw-normal text-muted">Daerah</span></div>
-                        <div class="fw-bold text-dark mb-2">42,86% dari Total Wilayah</div>
-                        <p class="text-secondary small mb-0">
-                            Penambahan tertinggi: <strong>Cilacap (+10)</strong>, <strong>Banjarnegara (+10)</strong>, serta Banyumas &amp; Pemalang (+7).
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Tipologi 2: Tetap / Stagnan -->
-                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="metric-card-modern border-accent-tetap h-100 p-4">
-                        <div class="badge-tetap d-inline-block px-3 py-1 rounded-pill mb-3 fw-bold small">
-                            <i class="fa fa-minus me-1"></i> Tetap (&Delta; = 0)
-                        </div>
-                        <div class="metric-val-large text-tetap mb-1">11 <span class="fs-6 fw-normal text-muted">Daerah</span></div>
-                        <div class="fw-bold text-dark mb-2">31,43% dari Total Wilayah</div>
-                        <p class="text-secondary small mb-0">
-                            Mencakup <strong>6 kota otonom 100% jenuh</strong> (Semarang, Solo, dll) serta 5 kabupaten stabil.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Tipologi 3: Penurunan Sinyal -->
-                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="metric-card-modern border-accent-penurunan h-100 p-4">
-                        <div class="badge-penurunan d-inline-block px-3 py-1 rounded-pill mb-3 fw-bold small">
-                            <i class="fa fa-arrow-down me-1"></i> Penurunan (&Delta; &lt; 0)
-                        </div>
-                        <div class="metric-val-large text-penurunan mb-1">9 <span class="fs-6 fw-normal text-muted">Kabupaten</span></div>
-                        <div class="fw-bold text-dark mb-2">25,71% dari Total Wilayah</div>
-                        <p class="text-secondary small mb-0">
-                            Pelemahan akibat kontur berbukit: <strong>Kendal (-18)</strong>, Temanggung (-6), dan Blora (-6).
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Key Metrics End -->
-
-
     <!-- Interactive Map Section Start -->
     <div id="peta-section" class="container-xxl py-5">
         <div class="container">
@@ -234,28 +139,8 @@
                 </p>
             </div>
 
-            <!-- Legenda Resmi -->
-            <div class="row justify-content-center mb-4 wow fadeInUp" data-wow-delay="0.2s">
-                <div class="col-lg-10">
-                    <div class="card border-0 shadow-sm p-3 bg-light rounded-3">
-                        <div class="d-flex flex-wrap justify-content-center align-items-center gap-3">
-                            <span class="fw-bold text-dark me-2"><i class="fa fa-layer-group text-primary me-1"></i> Legenda Simbol Visual:</span>
-                            <div class="legend-badge-item badge-peningkatan">
-                                <i class="fa fa-circle me-2"></i> Peningkatan (&Delta; &gt; 0) &bull; 15 Daerah (Hijau)
-                            </div>
-                            <div class="legend-badge-item badge-tetap">
-                                <i class="fa fa-circle me-2"></i> Tetap / Stagnan (&Delta; = 0) &bull; 11 Daerah (Abu-Abu)
-                            </div>
-                            <div class="legend-badge-item badge-penurunan">
-                                <i class="fa fa-circle me-2"></i> Penurunan (&Delta; &lt; 0) &bull; 9 Daerah (Merah)
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <!-- Wadah Peta Tematik (Iframe Web GIS qgis2web OpenLayers) -->
-            <div class="row justify-content-center wow fadeInUp" data-wow-delay="0.3s">
+            <div class="row justify-content-center wow fadeInUp" data-wow-delay="0.2s">
                 <div class="col-lg-12">
                     <div class="map-frame-box p-3">
                         <div class="d-flex justify-content-between align-items-center mb-3 px-2 flex-wrap gap-2">
@@ -281,6 +166,26 @@
                         <div class="d-flex justify-content-between align-items-center mt-3 px-2 text-muted small flex-wrap gap-2">
                             <span><i class="fa fa-info-circle text-primary me-1"></i> <strong>Tips Navigasi:</strong> Gunakan scroll mouse untuk Zoom-in / Zoom-out, seret (drag) untuk geser, dan klik poligon daerah untuk melihat popup atribut sinyal.</span>
                             <span>Powered by Quantum GIS (qgis2web OpenLayers)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Legenda Resmi (Ditempatkan di Bawah Peta) -->
+            <div class="row justify-content-center mt-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-lg-10">
+                    <div class="card border-0 shadow-sm p-3 bg-light rounded-3">
+                        <div class="d-flex flex-wrap justify-content-center align-items-center gap-3">
+                            <span class="fw-bold text-dark me-2"><i class="fa fa-layer-group text-primary me-1"></i> Legenda Simbol Visual:</span>
+                            <div class="legend-badge-item badge-peningkatan">
+                                <i class="fa fa-circle me-2"></i> Peningkatan (&Delta; &gt; 0) &bull; 15 Daerah (Hijau)
+                            </div>
+                            <div class="legend-badge-item badge-tetap">
+                                <i class="fa fa-circle me-2"></i> Tetap / Stagnan (&Delta; = 0) &bull; 11 Daerah (Abu-Abu)
+                            </div>
+                            <div class="legend-badge-item badge-penurunan">
+                                <i class="fa fa-circle me-2"></i> Penurunan (&Delta; &lt; 0) &bull; 9 Daerah (Merah)
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -631,6 +536,11 @@
                                 <td class="text-center fw-bold text-tetap">0</td>
                                 <td class="text-center"><span class="badge badge-tetap px-3 py-1">Tetap</span></td>
                             </tr>
+                            <tr id="table-no-data" style="display: none;">
+                                <td colspan="6" class="text-center py-4 text-muted">
+                                    <i class="fa fa-search me-2 text-primary"></i>Tidak ditemukan kabupaten/kota yang sesuai dengan kriteria pencarian Anda.
+                                </td>
+                            </tr>
                         </tbody>
                         <tfoot class="table-dark">
                             <tr>
@@ -651,6 +561,99 @@
         </div>
     </div>
     <!-- Interactive Data Table Section End -->
+
+
+    <!-- Key Metrics / Fact Counter Start (2-Tier Balanced Grid) -->
+    <div class="container-xxl py-4">
+        <div class="container">
+            <!-- Tier 1: Agregat Provinsi Jawa Tengah -->
+            <div class="row g-4 mb-4">
+                <!-- Metrik 1: Total Desa 4G/5G 2025 -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="metric-card-modern border-accent-primary h-100 d-flex align-items-center p-4">
+                        <div class="metric-icon-box bg-primary bg-opacity-10 text-primary me-4">
+                            <i class="fa fa-signal"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                            <div class="d-flex justify-content-between align-items-baseline mb-1">
+                                <span class="metric-label mb-0">Total Desa/Kelurahan Bersinyal 4G/5G (2025)</span>
+                                <span class="metric-pill-tag bg-primary bg-opacity-10 text-primary">Provinsi Jateng</span>
+                            </div>
+                            <div class="metric-val-large text-dark mb-1">8.333 <span class="fs-6 fw-normal text-muted">Desa</span></div>
+                            <div class="text-muted small">
+                                <i class="fa fa-arrow-up text-success me-1"></i> Meningkat dari <strong>8.316 desa</strong> pada tahun 2024
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Metrik 2: Pertumbuhan Agregat Bersih -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="metric-card-modern border-accent-success h-100 d-flex align-items-center p-4">
+                        <div class="metric-icon-box bg-success bg-opacity-10 text-success me-4">
+                            <i class="fa fa-chart-line"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                            <div class="d-flex justify-content-between align-items-baseline mb-1">
+                                <span class="metric-label mb-0">Pertumbuhan Bersih Agregat Sinyal</span>
+                                <span class="metric-pill-tag bg-success bg-opacity-10 text-success">&Delta; Positif</span>
+                            </div>
+                            <div class="metric-val-large text-success mb-1">+17 <span class="fs-6 fw-normal text-muted">Desa Baru</span></div>
+                            <div class="text-muted small">
+                                <i class="fa fa-check-circle text-success me-1"></i> Ekspansi jaringan aktif di wilayah barat dan selatan Jawa Tengah
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tier 2: Tiga Tipologi Spasial Jawa Tengah (Grid 3 Simetris) -->
+            <div class="row g-4 text-center">
+                <!-- Tipologi 1: Peningkatan -->
+                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="metric-card-modern border-accent-peningkatan h-100 p-4">
+                        <div class="badge-peningkatan d-inline-block px-3 py-1 rounded-pill mb-3 fw-bold small">
+                            <i class="fa fa-arrow-up me-1"></i> Peningkatan (&Delta; &gt; 0)
+                        </div>
+                        <div class="metric-val-large text-peningkatan mb-1">15 <span class="fs-6 fw-normal text-muted">Daerah</span></div>
+                        <div class="fw-bold text-dark mb-2">42,86% dari Total Wilayah</div>
+                        <p class="text-secondary small mb-0">
+                            Penambahan tertinggi: <strong>Cilacap (+10)</strong>, <strong>Banjarnegara (+10)</strong>, serta Banyumas &amp; Pemalang (+7).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tipologi 2: Tetap / Stagnan -->
+                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="metric-card-modern border-accent-tetap h-100 p-4">
+                        <div class="badge-tetap d-inline-block px-3 py-1 rounded-pill mb-3 fw-bold small">
+                            <i class="fa fa-minus me-1"></i> Tetap (&Delta; = 0)
+                        </div>
+                        <div class="metric-val-large text-tetap mb-1">11 <span class="fs-6 fw-normal text-muted">Daerah</span></div>
+                        <div class="fw-bold text-dark mb-2">31,43% dari Total Wilayah</div>
+                        <p class="text-secondary small mb-0">
+                            Mencakup <strong>6 kota otonom 100% jenuh</strong> (Semarang, Solo, dll) serta 5 kabupaten stabil.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tipologi 3: Penurunan Sinyal -->
+                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="metric-card-modern border-accent-penurunan h-100 p-4">
+                        <div class="badge-penurunan d-inline-block px-3 py-1 rounded-pill mb-3 fw-bold small">
+                            <i class="fa fa-arrow-down me-1"></i> Penurunan (&Delta; &lt; 0)
+                        </div>
+                        <div class="metric-val-large text-penurunan mb-1">9 <span class="fs-6 fw-normal text-muted">Kabupaten</span></div>
+                        <div class="fw-bold text-dark mb-2">25,71% dari Total Wilayah</div>
+                        <p class="text-secondary small mb-0">
+                            Pelemahan akibat kontur berbukit: <strong>Kendal (-18)</strong>, Temanggung (-6), dan Blora (-6).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Key Metrics End -->
 
 
     <!-- 3 Tipologi Wilayah Highlight Start -->
@@ -893,7 +896,6 @@
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
