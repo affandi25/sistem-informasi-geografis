@@ -480,61 +480,69 @@
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s" style="border-top: 3px solid #0066FF;">
         <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-4 col-md-6">
-                    <h4 class="text-white mb-4">
+            <div class="row g-4 justify-content-between">
+                <!-- Kolom 1: Identitas Riset & Brand -->
+                <div class="col-lg-5 col-md-12">
+                    <h4 class="text-white mb-3">
                         <i class="fa fa-broadcast-tower text-primary me-2"></i>GeoSignal Jateng
                     </h4>
-                    <p class="small text-secondary mb-3">
-                        Portal Sistem Informasi Geografis Dinamika Perubahan Ketersediaan Jaringan 4G/5G Tingkat Desa/Kelurahan di Provinsi Jawa Tengah Tahun 2024–2025.
+                    <p class="small text-secondary mb-3 leading-relaxed">
+                        Sistem Informasi Geografis berbasis web untuk analisis dan visualisasi spasial dinamika ketersediaan sinyal telekomunikasi seluler 4G/5G tingkat desa/kelurahan di 35 kabupaten/kota Provinsi Jawa Tengah.
                     </p>
-                    <div class="small text-muted">
-                        <p class="mb-1"><i class="fa fa-university text-primary me-2"></i>Universitas PGRI Semarang (UPGRIS)</p>
-                        <p class="mb-1"><i class="fa fa-map-marker-alt text-primary me-2"></i>Jl. Sidodadi Timur, Dokter Cipto No. 24, Semarang</p>
-                        <p class="mb-0"><i class="fa fa-envelope text-primary me-2"></i>m.yusufaffandi76@gmail.com</p>
+                    <div class="d-inline-flex align-items-center bg-secondary bg-opacity-25 px-3 py-2 rounded-2 text-muted small">
+                        <i class="fa fa-graduation-cap text-primary me-2 fs-6"></i>
+                        <span>Program Studi Teknik Informatika &bull; FTI UPGRIS</span>
                     </div>
                 </div>
 
-                <div class="col-lg-2 col-md-6">
-                    <h5 class="text-light mb-4">Tautan Halaman</h5>
-                    <a class="btn btn-link" href="index.html">Beranda</a>
-                    <a class="btn btn-link" href="index.html#peta-section">Peta Dinamika</a>
-                    <a class="btn btn-link" href="index.html#tabel-section">Tabel Data 35 Wilayah</a>
-                    <a class="btn btn-link" href="about.html">Metodologi &amp; Data</a>
-                    <a class="btn btn-link" href="analisis.html">Analisis Tipologi</a>
-                    <a class="btn btn-link" href="contact.html">Peneliti &amp; Kontak</a>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Tipologi Wilayah</h5>
-                    <div class="d-flex flex-column gap-2 small">
-                        <span class="text-light"><span class="badge badge-peningkatan me-2">15</span> Peningkatan (&Delta; &gt; 0)</span>
-                        <span class="text-light"><span class="badge badge-tetap me-2">11</span> Tetap / Stagnan (&Delta; = 0)</span>
-                        <span class="text-light"><span class="badge badge-penurunan me-2">9</span> Penurunan (&Delta; &lt; 0)</span>
-                        <hr class="border-secondary my-1">
-                        <span class="text-info"><i class="fa fa-check-circle me-1"></i> Total: 35 Kabupaten/Kota</span>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Sumber Referensi</h5>
-                    <ul class="list-unstyled small text-secondary">
-                        <li class="mb-2">&bull; BPS Provinsi Jawa Tengah (2024 &amp; 2025)</li>
-                        <li class="mb-2">&bull; Adrianto &amp; Herlambang (2022) - Pemetaan Daerah Krisis Sinyal</li>
-                        <li class="mb-2">&bull; Ambadar et al. (2023) - Ketidakmerataan Cakupan Jaringan 5G</li>
-                        <li class="mb-0">&bull; Pangestu &amp; Sumarno (2023) - Analisis Jangkauan Nirkabel GIS</li>
+                <!-- Kolom 2: Sumber Data & Spesifikasi Geospasial -->
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-light mb-3">Data &amp; Spesifikasi Spasial</h5>
+                    <ul class="list-unstyled small text-secondary mb-0">
+                        <li class="mb-2">
+                            <i class="fa fa-database text-primary me-2"></i>
+                            <strong>Data Sekunder:</strong> BPS Provinsi Jawa Tengah (2024–2025)
+                        </li>
+                        <li class="mb-2">
+                            <i class="fa fa-map text-primary me-2"></i>
+                            <strong>Cakupan Spasial:</strong> 35 Kabupaten/Kota (8.562 Desa)
+                        </li>
+                        <li class="mb-2">
+                            <i class="fa fa-layer-group text-primary me-2"></i>
+                            <strong>Pemetaan &amp; GIS:</strong> Quantum GIS (qgis2web OpenLayers)
+                        </li>
+                        <li class="mb-0">
+                            <i class="fa fa-compass text-primary me-2"></i>
+                            <strong>Referensi Koordinat:</strong> WGS 84 / UTM Zona 49S
+                        </li>
                     </ul>
+                </div>
+
+                <!-- Kolom 3: Peneliti & Korespondensi -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-3">Peneliti &amp; Korespondensi</h5>
+                    <p class="small text-secondary mb-2">
+                        <strong class="text-light d-block mb-1">Muhammad Yusuf Affandi</strong>
+                        Peneliti Utama / Mahasiswa Teknik Informatika UPGRIS
+                    </p>
+                    <p class="small text-secondary mb-3">
+                        <i class="fa fa-envelope text-primary me-2"></i>
+                        <a href="mailto:m.yusufaffandi76@gmail.com" class="text-secondary text-decoration-none">m.yusufaffandi76@gmail.com</a>
+                    </p>
+                    <a href="peta/index.html" target="_blank" class="btn btn-sm btn-outline-primary py-2 px-3">
+                        <i class="fa fa-external-link-alt me-1"></i> Buka Web GIS Layar Penuh
+                    </a>
                 </div>
             </div>
         </div>
 
-        <div class="container">
-            <div class="copyright d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <div class="container border-top border-secondary border-opacity-25 py-3">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 small text-secondary">
                 <div>
-                    &copy; 2026 <a href="index.html" class="fw-bold">GeoSignal Jateng</a> &bull; Riset SIG oleh Muhammad Yusuf Affandi (UPGRIS Semarang).
+                    &copy; 2026 <strong class="text-light">GeoSignal Jateng</strong> &bull; Riset Publikasi Sistem Informasi Geografis (SIG).
                 </div>
-                <div class="small text-secondary">
-                    Didukung oleh Quantum GIS (QGIS) &amp; Bootstrap 5
+                <div>
+                    Universitas PGRI Semarang (UPGRIS)
                 </div>
             </div>
         </div>
