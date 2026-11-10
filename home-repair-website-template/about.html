@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <title>Metodologi & Data - GeoSignal Jateng</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Metodologi SIG, Analisis Multitemporal, QGIS Table Join, BPS Jawa Tengah 4G 5G" name="keywords">
+    <meta content="Metodologi analisis geospasial multitemporal ketersediaan jaringan 4G/5G tingkat desa di Jawa Tengah berbasis QGIS dan data sekunder BPS." name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark text-light px-0 py-1 d-none d-lg-block style="font-size: 0.82rem;" border-bottom border-primary border-opacity-25">
+        <div class="row gx-0 align-items-center">
+            <div class="col-lg-7 px-5 text-start">
+                <small class="me-3">
+                    <i class="fa fa-graduation-cap text-primary me-2"></i>
+                    Riset Publikasi: Program Studi Teknik Informatika, Universitas PGRI Semarang (UPGRIS)
+                </small>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <small class="me-3"><i class="fa fa-envelope text-primary me-2"></i>m.yusufaffandi76@gmail.com</small>
+                <small><i class="fa fa-database text-primary me-2"></i>BPS Jawa Tengah (2024–2025)</small>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0 shadow-sm">
+        <a href="index.html" class="navbar-brand d-flex align-items-center">
+            <h2 class="m-0 fw-bold">
+                <i class="fa fa-broadcast-tower text-primary me-2"></i>GeoSignal <span class="text-primary">Jateng</span>
+            </h2>
+        </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-3 py-lg-0">
+                <a href="index.html" class="nav-item nav-link">Beranda</a>
+                <a href="index.html#peta-section" class="nav-item nav-link">Peta Dinamika</a>
+                <a href="index.html#tabel-section" class="nav-item nav-link">Tabel Data</a>
+                <a href="about.html" class="nav-item nav-link active">Metodologi &amp; Data</a>
+                <a href="analisis.html" class="nav-item nav-link">Analisis Tipologi</a>
+                <a href="contact.html" class="nav-item nav-link">Peneliti &amp; Rekomendasi</a>
+            </div>
+            <a href="index.html#peta-section" class="btn btn-primary py-2 px-4 d-none d-lg-block ms-3">
+                <i class="fa fa-map-marked-alt me-2"></i>Buka Peta
+            </a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-4 mb-4 wow fadeIn" data-wow-delay="0.1s" style="background: radial-gradient(ellipse at 50% 50%, rgba(30, 58, 138, 0.45) 0%, rgba(15, 23, 42, 0.95) 80%), url('img/bg-topographic-grid.svg') center center; background-size: cover, 1100px auto; border-bottom: 1px solid #1E293B;">
+        <div class="container text-center py-2">
+            <span class="section-kicker text-info mb-2"><i class="fa fa-cogs me-1"></i> Metodologi Penelitian &bull; Pendekatan Deskriptif Spasial</span>
+            <h1 class="display-5 text-white fw-bold mb-2">Metodologi &amp; Sumber Data Analisis</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center text-uppercase fs-7 mb-0">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-info">Beranda</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Metodologi &amp; Data</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- Latar Belakang & Urgensi Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <span class="section-kicker"><i class="fa fa-book-reader me-1"></i> Latar Belakang Riset (BAB I)</span>
+                    <h2 class="display-6 fw-bold text-dark mb-3">Urgensi Pemerataan Jaringan 4G/5G Desa</h2>
+                    <p class="text-secondary leading-relaxed mb-3">
+                        Jaringan internet dan sinyal telepon seluler memiliki peran krusial dalam mendukung komunikasi, percepatan ekonomi digital, akses pendidikan, dan efisiensi pelayanan publik. Seiring melonjaknya kebutuhan akses data cepat, jaringan generasi 4G dan 5G semakin dituntut untuk hadir merata di wilayah pedesaan maupun perkotaan.
+                    </p>
+                    <p class="text-secondary leading-relaxed mb-3">
+                        Namun, kondisi geografis Provinsi Jawa Tengah yang beragam—membentang dari dataran pesisir utara dan selatan hingga jajaran pegunungan dan perbukitan terjal—menjadi tantangan besar bagi perambatan gelombang radio seluler (Adrianto &amp; Herlambang, 2022). Akibatnya, perubahan ketersediaan sinyal tidak berlangsung seragam di seluruh wilayah.
+                    </p>
+                    <div class="callout-card p-3 mb-3">
+                        <div class="d-flex align-items-center">
+                            <i class="fa fa-chart-line text-primary fa-2x me-3"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1">Pertumbuhan Agregat Jawa Tengah (2024–2025)</h6>
+                                <p class="small text-muted mb-0">
+                                    Total desa penerima sinyal 4G/5G meningkat dari <strong>8.316 desa (2024)</strong> menjadi <strong>8.333 desa (2025)</strong>, atau bertambah <strong>+17 desa</strong> se-Provinsi Jawa Tengah.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="card border-0 shadow-lg rounded-4 p-4 bg-dark text-white">
+                        <div class="card-header bg-transparent border-bottom border-light border-opacity-10 pb-3">
+                            <h5 class="text-info mb-0"><i class="fa fa-book-open me-2"></i>Kajian Teoritis &amp; Landasan Ilmiah</h5>
+                        </div>
+                        <div class="card-body p-0 pt-3">
+                            <div class="mb-3 pb-3 border-bottom border-light border-opacity-10">
+                                <h6 class="fw-bold text-white mb-1"><i class="fa fa-map-marked-alt text-primary me-2"></i>Sistem Informasi Geografis (SIG)</h6>
+                                <p class="small text-light opacity-75 mb-0">
+                                    SIG digunakan untuk mengolah data berbasis lokasi spasial dan memvisualisasikan dinamika jangkauan sinyal ponsel dengan batas wilayah administrasi desa dan kabupaten secara presisi (Pangestu &amp; Sumarno, 2023).
+                                </p>
+                            </div>
+                            <div class="mb-3 pb-3 border-bottom border-light border-opacity-10">
+                                <h6 class="fw-bold text-white mb-1"><i class="fa fa-mountain text-warning me-2"></i>Pemetaan Daerah Krisis Sinyal</h6>
+                                <p class="small text-light opacity-75 mb-0">
+                                    SIG mempermudah identifikasi lokasi blank spot atau wilayah berbukit dengan pelemahan sinyal signifikan guna perencanaan penguat jaringan (Adrianto &amp; Herlambang, 2022).
+                                </p>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold text-white mb-1"><i class="fa fa-balance-scale text-info me-2"></i>Ketimpangan Cakupan Kota vs Desa</h6>
+                                <p class="small text-light opacity-75 mb-0">
+                                    Pemasangan infrastruktur generasi terbaru seperti 5G cenderung teraglomerasi di pusat perkotaan, sehingga pemantauan geospasial berkala penting untuk mencegah melebarnya disparitas digital (Ambadar et al., 2023).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Latar Belakang End -->
+
+
+    <!-- Sumber Data & Formulasi Start -->
+    <div class="container-xxl py-5 bg-light">
+        <div class="container">
+            <div class="text-center mx-auto mb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 760px;">
+                <span class="section-kicker"><i class="fa fa-database me-1"></i> Sumber &amp; Variabel Penelitian</span>
+                <h2 class="display-6 fw-bold text-dark">Dua Sumber Data Utama</h2>
+                <p class="text-secondary small mb-0">
+                    Penelitian ini merupakan studi <em>non-reactive</em> menggunakan pendekatan deskriptif kuantitatif berbasis analisis spasial multitemporal periode 2024 dan 2025.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Data Spasial -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-white">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary text-white p-3 rounded-circle me-3">
+                                <i class="fa fa-layer-group fa-lg"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-0">1. Data Spasial (Vektor Wilayah)</h5>
+                                <span class="badge bg-primary bg-opacity-10 text-primary">Format: Shapefile (.shp)</span>
+                            </div>
+                        </div>
+                        <p class="text-secondary small mb-3">
+                            Peta digital batas wilayah administrasi 35 Kabupaten/Kota di Provinsi Jawa Tengah berformat shapefile (*.shp). Data ini memuat geometri poligon batas wilayah resmi yang diakui pemerintah.
+                        </p>
+                        <div class="bg-light p-3 rounded-3 small text-muted">
+                            <i class="fa fa-check-circle text-primary me-1"></i> Digunakan sebagai layer spasial dasar (*basemap*) pada kanvas kerja perangkat lunak Quantum GIS (QGIS).
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Non-Spasial -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-white">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-success text-white p-3 rounded-circle me-3">
+                                <i class="fa fa-table fa-lg"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-0">2. Data Non-Spasial (BPS Jateng)</h5>
+                                <span class="badge bg-success bg-opacity-10 text-success">Publikasi Resmi BPS</span>
+                            </div>
+                        </div>
+                        <p class="text-secondary small mb-3">
+                            Data tabular sekunder Badan Pusat Statistik (BPS) Provinsi Jawa Tengah mengenai <em>"Banyaknya Desa/Kelurahan menurut Kabupaten/Kota dan Penerimaan Sinyal Internet Telepon Seluler di Provinsi Jawa Tengah"</em> Tahun 2024 dan 2025, khusus pada variabel sinyal 4G/5G/LTE.
+                        </p>
+                        <div class="bg-light p-3 rounded-3 small text-muted">
+                            <i class="fa fa-calculator text-success me-1"></i> Dihitung nilai selisih perubahannya melalui formula matematis:
+                            <div class="fw-bold text-dark mt-1">&Delta; Desa 4G/5G = Desa<sub>2025</sub> &minus; Desa<sub>2024</sub></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sumber Data End -->
+
+
+    <!-- Flowchart & Alur Analisis Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 760px;">
+                <span class="section-kicker"><i class="fa fa-project-diagram me-1"></i> Diagram Alir Operasional (Gambar 1)</span>
+                <h2 class="display-6 fw-bold text-dark">Tahapan Alur Analisis Sistem Informasi Geografis</h2>
+                <p class="text-secondary small mb-0">
+                    Proses pengolahan geospasial disusun secara sistematis mulai dari pengumpulan data hingga menghasilkan visualisasi layout peta tematik di QGIS.
+                </p>
+            </div>
+
+            <div class="row g-5 align-items-center">
+                <!-- Diagram Visual (Gambar 1 dari artikel) -->
+                <div class="col-lg-6 wow fadeInUp text-center" data-wow-delay="0.1s">
+                    <div class="research-img-wrapper p-3">
+                        <img src="img/flowchart-analisis.png" alt="Flow Chart Alur Analisis Sistem Informasi Geografis" class="img-fluid rounded shadow-sm" style="max-height: 580px;">
+                        <div class="mt-2 text-muted small">
+                            <strong>Gambar 1.</strong> Flow Chart Alur Analisis Sistem Informasi Geografis (Affandi, 2026)
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Penjelasan Langkah-Langkah Operasional -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="d-flex flex-column gap-4">
+                        <!-- Step 1 -->
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold me-3" style="width: 45px; height: 45px;">
+                                1
+                            </div>
+                            <div>
+                                <h5 class="fw-bold text-dark mb-1">Identifikasi Kebutuhan Data</h5>
+                                <p class="text-secondary small mb-0">
+                                    Mengidentifikasi data spasial (peta batas wilayah administrasi Kab/Kota *.shp) dan data non-spasial ketersediaan sinyal 4G/5G dari BPS Jawa Tengah tahun 2024 dan 2025.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold me-3" style="width: 45px; height: 45px;">
+                                2
+                            </div>
+                            <div>
+                                <h5 class="fw-bold text-dark mb-1">Pengelompokan Data &amp; Tabel Selisih (&Delta;)</h5>
+                                <p class="text-secondary small mb-0">
+                                    Mempersiapkan shapefile dan menghitung selisih jumlah desa bersinyal 4G/5G tiap kabupaten/kota: <span class="fw-bold text-primary">&Delta; = Desa<sub>2025</sub> &minus; Desa<sub>2024</sub></span>.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold me-3" style="width: 45px; height: 45px;">
+                                3
+                            </div>
+                            <div>
+                                <h5 class="fw-bold text-dark mb-1">Kombinasi Data melalui Table Join QGIS</h5>
+                                <p class="text-secondary small mb-0">
+                                    Menggabungkan data atribut tabel selisih ke dalam layer shapefile poligon batas kabupaten/kota di Quantum GIS menggunakan fungsi <em>Table Join</em> berbasis kunci nama wilayah.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold me-3" style="width: 45px; height: 45px;">
+                                4
+                            </div>
+                            <div>
+                                <h5 class="fw-bold text-dark mb-1">Klasifikasi Simbol &amp; Layouting Peta Tematik</h5>
+                                <p class="text-secondary small mb-2">
+                                    Mengklasifikasikan wilayah ke dalam 3 kelas visualisasi dan mengekspor peta ke dalam layout kartografi standar:
+                                </p>
+                                <div class="d-flex flex-wrap gap-2 small">
+                                    <span class="badge badge-peningkatan px-2 py-1"><i class="fa fa-circle me-1"></i> Hijau: &Delta; &gt; 0 (Peningkatan)</span>
+                                    <span class="badge badge-tetap px-2 py-1"><i class="fa fa-circle me-1"></i> Abu-Abu: &Delta; = 0 (Tetap)</span>
+                                    <span class="badge badge-penurunan px-2 py-1"><i class="fa fa-circle me-1"></i> Merah: &Delta; &lt; 0 (Penurunan)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 pt-2">
+                        <a href="analisis.html" class="btn btn-primary py-2 px-4 shadow-sm" style="font-size: 0.88rem; font-weight: 600;">
+                            <i class="fa fa-chart-pie me-2"></i>Lanjut ke Pembahasan 3 Tipologi
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Flowchart End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s" style="border-top: 3px solid #0066FF;">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-white mb-4">
+                        <i class="fa fa-broadcast-tower text-primary me-2"></i>GeoSignal Jateng
+                    </h4>
+                    <p class="small text-secondary mb-3">
+                        Portal Sistem Informasi Geografis Dinamika Perubahan Ketersediaan Jaringan 4G/5G Tingkat Desa/Kelurahan di Provinsi Jawa Tengah Tahun 2024–2025.
+                    </p>
+                    <div class="small text-muted">
+                        <p class="mb-1"><i class="fa fa-university text-primary me-2"></i>Universitas PGRI Semarang (UPGRIS)</p>
+                        <p class="mb-1"><i class="fa fa-map-marker-alt text-primary me-2"></i>Jl. Sidodadi Timur, Dokter Cipto No. 24, Semarang</p>
+                        <p class="mb-0"><i class="fa fa-envelope text-primary me-2"></i>m.yusufaffandi76@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="text-light mb-4">Tautan Halaman</h5>
+                    <a class="btn btn-link" href="index.html">Beranda</a>
+                    <a class="btn btn-link" href="index.html#peta-section">Peta Dinamika</a>
+                    <a class="btn btn-link" href="index.html#tabel-section">Tabel Data 35 Wilayah</a>
+                    <a class="btn btn-link" href="about.html">Metodologi &amp; Data</a>
+                    <a class="btn btn-link" href="analisis.html">Analisis Tipologi</a>
+                    <a class="btn btn-link" href="contact.html">Peneliti &amp; Kontak</a>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Tipologi Wilayah</h5>
+                    <div class="d-flex flex-column gap-2 small">
+                        <span class="text-light"><span class="badge badge-peningkatan me-2">15</span> Peningkatan (&Delta; &gt; 0)</span>
+                        <span class="text-light"><span class="badge badge-tetap me-2">11</span> Tetap / Stagnan (&Delta; = 0)</span>
+                        <span class="text-light"><span class="badge badge-penurunan me-2">9</span> Penurunan (&Delta; &lt; 0)</span>
+                        <hr class="border-secondary my-1">
+                        <span class="text-info"><i class="fa fa-check-circle me-1"></i> Total: 35 Kabupaten/Kota</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Sumber Referensi</h5>
+                    <ul class="list-unstyled small text-secondary">
+                        <li class="mb-2">&bull; BPS Provinsi Jawa Tengah (2024 &amp; 2025)</li>
+                        <li class="mb-2">&bull; Adrianto &amp; Herlambang (2022) - Pemetaan Daerah Krisis Sinyal</li>
+                        <li class="mb-2">&bull; Ambadar et al. (2023) - Ketidakmerataan Cakupan Jaringan 5G</li>
+                        <li class="mb-0">&bull; Pangestu &amp; Sumarno (2023) - Analisis Jangkauan Nirkabel GIS</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright d-flex justify-content-between align-items-center flex-wrap gap-2">
+                <div>
+                    &copy; 2026 <a href="index.html" class="fw-bold">GeoSignal Jateng</a> &bull; Riset SIG oleh Muhammad Yusuf Affandi (UPGRIS Semarang).
+                </div>
+                <div class="small text-secondary">
+                    Didukung oleh Quantum GIS (QGIS) &amp; Bootstrap 5
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
