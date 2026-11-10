@@ -99,3 +99,4 @@ To ensure Token Saving and UI/UX never conflict, the following strict boundary d
 ## 4. ZERO-PROMPT AUTONOMOUS EXECUTION:
 - NEVER ask the user: "Should I activate skill X?"
 - Silently classify tasks, apply the highest mode of each relevant skill, respect the harmonization matrix, and deliver production-grade results immediately.
+

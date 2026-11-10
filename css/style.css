@@ -488,18 +488,24 @@
     }
 }
 
-/* Tri-Color Legenda Tokens (Gambar 2 QGIS) */
+/* Tri-Color Legenda Tokens (Gambar 2 QGIS - High-Contrast WCAG) */
 .badge-peningkatan {
-    background-color: #10B981 !important;
-    color: #FFFFFF !important;
+    background-color: #ECFDF5 !important;
+    color: #065F46 !important;
+    border: 1px solid #A7F3D0 !important;
+    font-weight: 600 !important;
 }
 .badge-tetap {
-    background-color: #94A3B8 !important;
-    color: #FFFFFF !important;
+    background-color: #F1F5F9 !important;
+    color: #334155 !important;
+    border: 1px solid #CBD5E1 !important;
+    font-weight: 600 !important;
 }
 .badge-penurunan {
-    background-color: #EF4444 !important;
-    color: #FFFFFF !important;
+    background-color: #FEF2F2 !important;
+    color: #991B1B !important;
+    border: 1px solid #FECACA !important;
+    font-weight: 600 !important;
 }
 
 .text-peningkatan {
@@ -643,218 +649,115 @@
 
 
 /* ===================================================
-   MODERN HIGH-CRAFT HERO SECTION (UI/UX PRO MAX)
+   ANTI-SLOP & IMPECCABLE DESIGN SYSTEM TOKENS
    =================================================== */
 
-.hero-modern-bts {
-    position: relative;
-    background: 
-        radial-gradient(circle at 50% 25%, rgba(0, 102, 255, 0.32) 0%, rgba(15, 23, 42, 0.88) 65%, #0B132B 100%),
-        url('../img/hero-tower-bts.jpg');
-    background-size: cover;
-    background-position: center 35%;
-    background-repeat: no-repeat;
-    padding: 110px 0 95px 0;
-    border-bottom: 2px solid rgba(0, 102, 255, 0.4);
-    overflow: hidden;
+:root {
+    --primary: #0066FF;
+    --primary-hover: #0052CC;
+    --primary-subtle: rgba(0, 102, 255, 0.08);
+    --dark: #0F172A;
+    --dark-surface: #1E293B;
+    --slate-border: #E2E8F0;
+    --surface-white: #FFFFFF;
+    --surface-light: #F8FAFC;
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --text-muted: #64748B;
+    
+    /* Typology Tokens (Accessible WCAG AAA) */
+    --peningkatan-bg: #ECFDF5;
+    --peningkatan-text: #065F46;
+    --peningkatan-border: #A7F3D0;
+    --peningkatan-solid: #10B981;
+    
+    --tetap-bg: #F1F5F9;
+    --tetap-text: #334155;
+    --tetap-border: #CBD5E1;
+    --tetap-solid: #64748B;
+    
+    --penurunan-bg: #FEF2F2;
+    --penurunan-text: #991B1B;
+    --penurunan-border: #FECACA;
+    --penurunan-solid: #EF4444;
 }
 
-/* Subtle Animated Ambient Grid Lines Overlay */
-.hero-modern-bts::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: 
-        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-    background-size: 50px 50px;
-    pointer-events: none;
-    opacity: 0.6;
+/* Accessible Focus States (WCAG 2.2 AA/AAA) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 2px solid #0066FF !important;
+    outline-offset: 2px !important;
+    box-shadow: none !important;
 }
 
-/* Glowing Accent Line */
-.hero-modern-bts::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 20%;
-    right: 20%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #0066FF, #06B6D4, transparent);
-    box-shadow: 0 0 15px #0066FF;
+/* Micro-Interaction: Tactile Button Press */
+.btn {
+    transition: transform 0.16s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease !important;
 }
-
-/* Eyebrow Pill Badge */
-.hero-eyebrow {
-    display: inline-flex;
-    align-items: center;
-    background: rgba(0, 102, 255, 0.16);
-    border: 1px solid rgba(0, 102, 255, 0.4);
-    backdrop-filter: blur(12px);
-    padding: 6px 16px;
-    border-radius: 50px;
-    color: #38BDF8;
-    font-size: 0.82rem;
-    font-weight: 600;
-    letter-spacing: 0.8px;
-    text-transform: uppercase;
-    box-shadow: 0 4px 15px rgba(0, 102, 255, 0.15);
-}
-
-.hero-pulse-dot {
-    width: 8px;
-    height: 8px;
-    background-color: #10B981;
-    border-radius: 50%;
-    margin-right: 8px;
-    box-shadow: 0 0 10px #10B981;
-    animation: pulseGlow 2s infinite ease-in-out;
-}
-
-@keyframes pulseGlow {
-    0%, 100% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.3); opacity: 0.6; }
-}
-
-/* Hero Title Typography */
-.hero-headline {
-    font-size: clamp(1.65rem, 3.8vw, 2.65rem);
-    font-weight: 800;
-    line-height: 1.32;
-    letter-spacing: -0.6px;
-    color: #FFFFFF;
-    max-width: 1020px;
-    margin: 0 auto;
-    text-shadow: 0 4px 25px rgba(0, 0, 0, 0.6);
-}
-
-.hero-gradient-text {
-    background: linear-gradient(135deg, #38BDF8 0%, #60A5FA 50%, #A78BFA 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block;
-    filter: drop-shadow(0 2px 10px rgba(56, 189, 248, 0.3));
-}
-
-/* Hero Author Pill Card */
-.hero-author-card {
-    display: inline-flex;
-    align-items: center;
-    background: rgba(15, 23, 42, 0.75);
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    backdrop-filter: blur(12px);
-    padding: 8px 20px;
-    border-radius: 50px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
-    margin-top: 5px;
-}
-
-.hero-author-avatar {
-    width: 34px;
-    height: 34px;
-    background: linear-gradient(135deg, #0066FF, #06B6D4);
-    color: #FFFFFF;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.85rem;
-    margin-right: 12px;
-    flex-shrink: 0;
-}
-
-.hero-author-meta {
-    text-align: left;
-    line-height: 1.25;
-}
-
-.hero-author-name {
-    font-size: 0.9rem;
-    font-weight: 700;
-    color: #F8FAFC;
-    display: block;
-}
-
-.hero-author-dept {
-    font-size: 0.76rem;
-    color: #94A3B8;
-}
-
-/* Modern Hero Buttons */
-.btn-hero-primary {
-    background: linear-gradient(135deg, #0066FF 0%, #2563EB 100%) !important;
-    color: #FFFFFF !important;
-    border: 1px solid rgba(255, 255, 255, 0.25) !important;
-    padding: 12px 28px !important;
-    border-radius: 50px !important;
-    font-size: 0.95rem !important;
-    font-weight: 600 !important;
-    box-shadow: 0 8px 25px rgba(0, 102, 255, 0.45) !important;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    display: inline-flex;
-    align-items: center;
-}
-
-.btn-hero-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 30px rgba(0, 102, 255, 0.6) !important;
-    color: #FFFFFF !important;
-}
-
-.btn-hero-glass {
-    background: rgba(255, 255, 255, 0.08) !important;
-    color: #F8FAFC !important;
-    border: 1px solid rgba(255, 255, 255, 0.22) !important;
-    backdrop-filter: blur(10px);
-    padding: 12px 26px !important;
-    border-radius: 50px !important;
-    font-size: 0.95rem !important;
-    font-weight: 500 !important;
-    transition: all 0.3s ease !important;
-    display: inline-flex;
-    align-items: center;
-}
-
-.btn-hero-glass:hover {
-    background: rgba(255, 255, 255, 0.16) !important;
-    color: #FFFFFF !important;
-    border-color: rgba(255, 255, 255, 0.4) !important;
-    transform: translateY(-2px);
-}
-
-/* Floating Telemetry Chips */
-.hero-telemetry-bar {
-    margin-top: 35px;
-    padding-top: 25px;
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-.hero-chip {
-    display: inline-flex;
-    align-items: center;
-    background: rgba(15, 23, 42, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(8px);
-    padding: 7px 16px;
-    border-radius: 30px;
-    color: #CBD5E1;
-    font-size: 0.82rem;
-    font-weight: 500;
-    transition: all 0.2s ease;
-}
-
-.hero-chip:hover {
-    background: rgba(15, 23, 42, 0.85);
-    border-color: rgba(0, 102, 255, 0.4);
-    color: #FFFFFF;
+.btn:hover {
     transform: translateY(-1px);
 }
-
-.hero-chip-val {
-    font-weight: 700;
-    color: #38BDF8;
-    margin-left: 6px;
+.btn:active {
+    transform: translateY(1px) !important;
 }
+
+/* Micro-Interaction: Tactile Card Lift */
+.card-interactive {
+    transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.22s ease !important;
+}
+.card-interactive:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -4px rgba(15, 23, 42, 0.08), 0 4px 6px -2px rgba(15, 23, 42, 0.03) !important;
+}
+
+/* Tri-Color Refined Badges (Accessible High-Contrast) */
+.badge-peningkatan {
+    background-color: var(--peningkatan-bg) !important;
+    color: var(--peningkatan-text) !important;
+    border: 1px solid var(--peningkatan-border) !important;
+    font-weight: 600;
+}
+.badge-tetap {
+    background-color: var(--tetap-bg) !important;
+    color: var(--tetap-text) !important;
+    border: 1px solid var(--tetap-border) !important;
+    font-weight: 600;
+}
+.badge-penurunan {
+    background-color: var(--penurunan-bg) !important;
+    color: var(--penurunan-text) !important;
+    border: 1px solid var(--penurunan-border) !important;
+    font-weight: 600;
+}
+
+/* Modern Legend Pills */
+.legend-pill-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 10px;
+    padding: 8px 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+    transition: all 0.2s ease;
+}
+.legend-pill-card:hover {
+    border-color: #CBD5E1;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+}
+.legend-indicator-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+.dot-peningkatan { background-color: var(--peningkatan-solid); }
+.dot-tetap { background-color: var(--tetap-solid); }
+.dot-penurunan { background-color: var(--penurunan-solid); }
 
 
 /* ===================================================
