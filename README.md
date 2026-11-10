@@ -36,28 +36,27 @@ Portal visualisasi spasial tematik berbasis Web GIS untuk memetakan perubahan ke
 ## 📂 Struktur Direktori
 
 ```text
-├── blueprints/                      # Dokumentasi perancangan dan spesifikasi teknis
+├── index.html                   # Beranda portal (Hero, KPI Metrik, Peta Tematik, Tabel Data)
+├── about.html                   # Latar Belakang, Kajian Pustaka, Dataset & Flowchart SIG
+├── analisis.html                # Pembahasan Mendalam 3 Tipologi & Studi Kasus Kendal
+├── contact.html                 # Rekomendasi Kebijakan, Profil Peneliti & Korespondensi
+├── 404.html                     # Halaman status penanganan rute
+├── css/
+│   ├── bootstrap.min.css
+│   └── style.css                # Desain tema Telecom Blue, Dark Navy & Craft Floor
+├── js/
+│   └── main.js                  # Logika interaktif filter, pencarian, CSV, & modal inspector
+├── img/                         # Aset gambar ilmiah, diagram alir, dan latar grid kartografi
+├── peta/                        # Aplikasi Web GIS interaktif hasil ekspor qgis2web OpenLayers
+│   ├── index.html
+│   ├── layers/
+│   ├── styles/
+│   └── resources/
+├── blueprints/                  # Dokumentasi perancangan dan spesifikasi teknis
 │   ├── 01-arsitektur-dan-roadmap.md
 │   ├── 02-desain-dan-tema-teknologi.md
 │   ├── 03-pemetaan-konten-halaman.md
 │   └── 04-panduan-integrasi-qgis2web.md
-├── home-repair-website-template/    # Direktori sumber aplikasi web
-│   ├── index.html                   # Beranda portal (Hero, KPI Metrik, Peta Tematik, Tabel Data)
-│   ├── about.html                   # Latar Belakang, Kajian Pustaka, Dataset & Flowchart SIG
-│   ├── analisis.html                # Pembahasan Mendalam 3 Tipologi & Studi Kasus Kendal
-│   ├── contact.html                 # Rekomendasi Kebijakan, Profil Peneliti & Korespondensi
-│   ├── 404.html                     # Halaman status penanganan rute
-│   ├── css/
-│   │   ├── bootstrap.min.css
-│   │   └── style.css                # Desain tema Telecom Blue, Dark Navy & Craft Floor
-│   ├── js/
-│   │   └── main.js                  # Logika interaktif filter, pencarian, CSV, & modal inspector
-│   ├── img/                         # Aset gambar ilmiah, diagram alir, dan latar grid kartografi
-│   └── peta/                        # Aplikasi Web GIS interaktif hasil ekspor qgis2web OpenLayers
-│       ├── index.html
-│       ├── layers/
-│       ├── styles/
-│       └── resources/
 └── README.md
 ```
 
