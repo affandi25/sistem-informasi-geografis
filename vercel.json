@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/home-repair-website-template/(.*)",
+      "destination": "/home-repair-website-template/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/home-repair-website-template/$1"
+    }
+  ]
+}
