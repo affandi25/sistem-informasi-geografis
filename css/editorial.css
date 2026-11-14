@@ -226,18 +226,18 @@ textarea:focus-visible {
   .navbar .navbar-nav .nav-link { min-height: 44px; display: flex; align-items: center; }
 }
 
-/* ---------- Hero: night satellite plate (Java, NASA/ISS) ---------- */
+/* ---------- Hero: menara BTS telekomunikasi ---------- */
 .hero-academic-gis {
   position: relative;
   background-color: var(--hero-ground) !important;
   background-image:
-    radial-gradient(ellipse 66% 58% at 50% 44%, rgba(6, 18, 32, 0.82) 0%, rgba(6, 18, 32, 0.42) 58%, rgba(6, 18, 32, 0) 80%),
+    radial-gradient(ellipse 66% 58% at 50% 44%, rgba(6, 18, 32, 0.78) 0%, rgba(6, 18, 32, 0.42) 58%, rgba(6, 18, 32, 0) 80%),
     linear-gradient(180deg, rgba(6, 18, 32, 0.72) 0%, rgba(6, 18, 32, 0.34) 50%, rgba(6, 18, 32, 0.86) 100%),
     linear-gradient(to right, rgba(234, 241, 246, 0.055) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(234, 241, 246, 0.055) 1px, transparent 1px),
-    url("../img/hero-java-night.jpg");
+    url("../img/BTS.png");
   background-size: auto, auto, 48px 48px, 48px 48px, cover;
-  background-position: center, center, center, center, center 45%;
+  background-position: center, center, center, center, center center;
   background-repeat: no-repeat;
   padding: clamp(3.25rem, 6.5vw, 6rem) 0 clamp(2.5rem, 4.5vw, 3.75rem) !important;
   border-bottom: 1px solid rgba(234, 241, 246, 0.14);
