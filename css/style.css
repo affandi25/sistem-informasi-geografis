@@ -197,11 +197,11 @@
     position: relative;
     background-color: #0F172A;
     background-image: 
-        radial-gradient(ellipse at 50% 40%, rgba(30, 58, 138, 0.45) 0%, rgba(15, 23, 42, 0.95) 75%),
-        url('../img/bg-topographic-grid.svg');
-    background-size: cover, 1100px auto;
+        linear-gradient(180deg, rgba(15, 23, 42, 0.72) 0%, rgba(15, 23, 42, 0.86) 100%),
+        url('../img/BTS.png');
+    background-size: cover;
     background-position: center center;
-    background-repeat: no-repeat, repeat;
+    background-repeat: no-repeat;
     padding: 48px 0 42px 0;
     border-bottom: 1px solid #1E293B;
     margin-bottom: 24px;
@@ -458,35 +458,6 @@
 /* ===================================================
    GEOSIGNAL JATENG CUSTOM STYLES (TELECOM & SPATIAL GIS)
    =================================================== */
-
-/* Hero BTS Banner (Centered Layout) */
-.hero-bts-banner {
-    position: relative;
-    background-image: linear-gradient(rgba(11, 19, 43, 0.85), rgba(15, 23, 42, 0.92)), url('../img/hero-tower-bts.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    padding: 100px 0 90px 0;
-    border-bottom: 3px solid #0066FF;
-}
-
-.hero-bts-title {
-    font-size: 2.1rem;
-    font-weight: 700;
-    line-height: 1.35;
-    letter-spacing: -0.5px;
-    max-width: 950px;
-    margin: 0 auto;
-}
-
-@media (max-width: 768px) {
-    .hero-bts-banner {
-        padding: 60px 0;
-    }
-    .hero-bts-title {
-        font-size: 1.45rem;
-    }
-}
 
 /* Tri-Color Legenda Tokens (Gambar 2 QGIS - High-Contrast WCAG) */
 .badge-peningkatan {
@@ -840,11 +811,11 @@ select:focus-visible {
     position: relative;
     background-color: #0F172A;
     background-image: 
-        radial-gradient(ellipse at 50% 40%, rgba(30, 58, 138, 0.45) 0%, rgba(15, 23, 42, 0.95) 75%),
-        url('../img/bg-topographic-grid.svg');
-    background-size: cover, 1100px auto;
+        linear-gradient(180deg, rgba(15, 23, 42, 0.72) 0%, rgba(15, 23, 42, 0.86) 100%),
+        url('../img/BTS.png');
+    background-size: cover;
     background-position: center center;
-    background-repeat: no-repeat, repeat;
+    background-repeat: no-repeat;
     padding: 70px 0 65px 0;
     border-bottom: 1px solid #1E293B;
 }
