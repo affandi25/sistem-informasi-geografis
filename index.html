@@ -11,60 +11,29 @@
     <!-- Favicon -->
     <link href="img/favicon.svg" rel="icon" type="image/svg+xml">
 
-    <!-- Google Web Fonts -->
+    <!-- Editorial Kartografi: serif display + grotesk + mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..600&family=Hanken+Grotesk:wght@400..600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <!-- Editorial stylesheet (layered over Bootstrap) -->
+    <link href="css/editorial.css" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-grow text-primary" role="status"></div>
-    </div>
-    <!-- Spinner End -->
-
-
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-dark text-light px-0 py-1 d-none d-lg-block border-bottom border-primary border-opacity-25" style="font-size: 0.82rem;">
-        <div class="row gx-0 align-items-center">
-            <div class="col-lg-7 px-5 text-start">
-                <small class="me-3">
-                    <i class="fa fa-graduation-cap text-primary me-2"></i>
-                    Riset Publikasi: Program Studi Teknik Informatika, Universitas PGRI Semarang (UPGRIS)
-                </small>
-            </div>
-            <div class="col-lg-5 px-5 text-end">
-                <small class="me-3">
-                    <i class="fa fa-envelope text-primary me-2"></i>m.yusufaffandi76@gmail.com
-                </small>
-                <small>
-                    <i class="fa fa-database text-primary me-2"></i>Sumber Data: BPS Jawa Tengah (2024–2025)
-                </small>
-            </div>
-        </div>
-    </div>
-    <!-- Topbar End -->
-
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0 shadow-sm">
         <a href="index.html" class="navbar-brand d-flex align-items-center">
             <h2 class="m-0 fw-bold">
-                <i class="fa fa-broadcast-tower text-primary me-2"></i>GeoSignal <span class="text-primary">Jateng</span>
+                GeoSignal <span class="text-primary">Jateng</span>
             </h2>
         </a>
         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -79,7 +48,7 @@
                 <a href="contact.html" class="nav-item nav-link">Peneliti &amp; Rekomendasi</a>
             </div>
             <a href="peta/index.html" target="_blank" class="btn btn-primary py-2 px-4 d-none d-lg-block ms-3">
-                <i class="fa fa-map-marked-alt me-2"></i>Buka Peta
+                Buka Peta
             </a>
         </div>
     </nav>
@@ -91,7 +60,7 @@
         <div class="container text-center position-relative" style="z-index: 2;">
             <!-- Metadata Subjek & Wilayah -->
             <div class="hero-gis-meta">
-                <i class="fa fa-map-marked-alt me-2 text-info"></i> Sistem Informasi Geografis &bull; Provinsi Jawa Tengah
+                Sistem Informasi Geografis &bull; Provinsi Jawa Tengah
             </div>
 
             <!-- Judul Artikel: Ukuran Proporsional, Solid & Bebas Efek AI Slop -->
@@ -109,20 +78,22 @@
             <!-- 2 Tombol Aksi Fungsional & Minimalis -->
             <div class="d-flex justify-content-center flex-wrap gap-3">
                 <a href="#peta-section" class="btn btn-gis-primary">
-                    <i class="fa fa-map me-2"></i>Buka Peta Tematik QGIS
+                    Buka Peta Tematik QGIS
                 </a>
                 <a href="#tabel-section" class="btn btn-gis-outline">
-                    <i class="fa fa-table me-2"></i>Rekapitulasi 35 Kabupaten/Kota
+                    Rekapitulasi 35 Kabupaten/Kota
                 </a>
             </div>
 
             <!-- Strip Koordinat Geospasial Asli Jawa Tengah -->
             <div class="hero-spatial-strip">
-                <span><i class="fa fa-globe-asia me-1 text-primary"></i> Cakupan: 35 Kab/Kota</span>
-                <span><i class="fa fa-compass me-1 text-primary"></i> 7&deg;00'00"S 110&deg;24'00"E</span>
-                <span><i class="fa fa-layer-group me-1 text-primary"></i> Datum: WGS 84 / UTM 49S</span>
-                <span><i class="fa fa-calendar-alt me-1 text-primary"></i> Periode: 2024&ndash;2025</span>
+                <span>Cakupan: 35 Kab/Kota</span>
+                <span>7&deg;00'00"S 110&deg;24'00"E</span>
+                <span>Datum: WGS 84 / UTM 49S</span>
+                <span>Periode: 2024&ndash;2025</span>
             </div>
+
+            <small class="hero-credit">Citra latar: NASA / ISS Expedition 56 &bull; Foto ISS056-E-6994 (domain publik)</small>
         </div>
     </div>
     <!-- Hero Banner End -->
@@ -132,10 +103,10 @@
     <div id="peta-section" class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto mb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 760px;">
-                <span class="section-kicker"><i class="fa fa-map me-1"></i> Visualisasi Spasial QGIS</span>
+                <span class="section-kicker"><span class="section-index">01</span>Visualisasi Spasial QGIS</span>
                 <h2 class="display-6 fw-bold text-dark">Peta Dinamika Perubahan Sinyal 4G/5G Jawa Tengah</h2>
                 <p class="text-secondary small mb-0">
-                    Penyajian peta perubahan tunggal (<em>Single Change Map</em>) periode 2024–2025 efektif secara metodologis tanpa memicu redundansi kartografis, mengelompokkan 35 kabupaten/kota ke dalam 3 kategori kondisi jaringan.
+                    Peta perubahan tunggal 2024&ndash;2025: 35 kabupaten/kota dalam tiga kondisi jaringan.
                 </p>
             </div>
 
@@ -144,28 +115,27 @@
                 <div class="col-lg-12">
                     <div class="map-frame-box p-3">
                         <div class="d-flex justify-content-between align-items-center mb-3 px-2 flex-wrap gap-2">
-                            <div>
-                                <span class="badge bg-primary me-2"><i class="fa fa-layer-group"></i> Web GIS Interaktif</span>
-                                <strong>Peta Dinamika Perubahan Sinyal 4G/5G Provinsi Jawa Tengah (2024–2025)</strong>
+                            <div class="d-flex align-items-center gap-2 flex-wrap">
+                                <span class="badge bg-primary">Web GIS Interaktif</span>
+                                <span class="small text-muted">Provinsi Jawa Tengah, 2024&ndash;2025</span>
                             </div>
                             <div class="d-flex align-items-center gap-2">
                                 <a href="peta/index.html" target="_blank" class="btn btn-sm btn-outline-primary" title="Buka peta interaktif di tab baru">
-                                    <i class="fa fa-external-link-alt me-1"></i> Buka Layar Penuh
+                                    Buka Layar Penuh
                                 </a>
                                 <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#mapZoomModal" title="Lihat gambar layout cetak resmi">
-                                    <i class="fa fa-image me-1"></i> Layout Cetak QGIS
+                                    Layout Cetak QGIS
                                 </button>
                             </div>
                         </div>
 
                         <!-- Iframe Peta Interaktif qgis2web -->
-                        <div class="position-relative overflow-hidden rounded-3 border bg-light shadow-sm" style="height: 640px;">
+                        <div class="position-relative overflow-hidden rounded-3 border bg-light shadow-sm map-embed">
                             <iframe src="peta/index.html" class="w-100 h-100 border-0" title="Peta Interaktif Dinamika Sinyal 4G/5G Jawa Tengah" allowfullscreen></iframe>
                         </div>
 
-                        <div class="d-flex justify-content-between align-items-center mt-3 px-2 text-muted small flex-wrap gap-2">
-                            <span><i class="fa fa-info-circle text-primary me-1"></i> <strong>Tips Navigasi:</strong> Gunakan scroll mouse untuk Zoom-in / Zoom-out, seret (drag) untuk geser, dan klik poligon daerah untuk melihat popup atribut sinyal.</span>
-                            <span>Powered by Quantum GIS (qgis2web OpenLayers)</span>
+                        <div class="d-flex justify-content-end align-items-center mt-3 px-2 map-credit">
+                            <span>Quantum GIS &bull; qgis2web &bull; OpenLayers</span>
                         </div>
                     </div>
                 </div>
@@ -177,7 +147,7 @@
                     <div class="card border-0 shadow-sm p-3 bg-white rounded-3">
                         <div class="d-flex flex-wrap justify-content-center align-items-center gap-3">
                             <span class="fw-bold text-dark me-2 small">
-                                <i class="fa fa-layer-group text-primary me-1"></i> Legenda Dinamika Spasial:
+                                Legenda Dinamika Spasial
                             </span>
                             <div class="legend-pill-card">
                                 <span class="legend-indicator-dot dot-peningkatan"></span>
@@ -207,46 +177,39 @@
     <div id="tabel-section" class="container-xxl py-5 bg-light">
         <div class="container">
             <div class="text-center mx-auto mb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 760px;">
-                <span class="section-kicker"><i class="fa fa-table me-1"></i> Data Sekunder BPS Provinsi Jawa Tengah</span>
+                <span class="section-kicker"><span class="section-index">02</span>Data Sekunder BPS Provinsi Jawa Tengah</span>
                 <h2 class="display-6 fw-bold text-dark">Rekapitulasi Ketersediaan Sinyal 4G/5G di 35 Kabupaten/Kota</h2>
                 <p class="text-secondary small mb-0">
-                    Perbandingan jumlah desa/kelurahan penerima sinyal internet telepon seluler 4G/5G periode 2024 dan 2025 beserta selisih (&Delta;) perubahannya.
+                    Jumlah desa bersinyal 4G/5G 2024 dan 2025 beserta selisihnya per kabupaten/kota. Klik satu baris untuk membuka analisis wilayah.
                 </p>
             </div>
 
             <!-- Kontrol Filter & Pencarian -->
-            <div class="row align-items-center mb-4 g-3 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="row align-items-center mb-3 g-3 wow fadeInUp" data-wow-delay="0.2s">
                 <div class="col-md-7">
                     <div class="filter-btn-group d-flex flex-wrap gap-2">
                         <button type="button" class="btn btn-filter-status active btn-primary" data-filter="all">
                             Semua Wilayah (<span id="visible-row-count">35</span>)
                         </button>
                         <button type="button" class="btn btn-filter-status btn-outline-primary" data-filter="peningkatan">
-                            <i class="fa fa-arrow-up text-success me-1"></i> Peningkatan (15)
+                            Peningkatan (15)
                         </button>
                         <button type="button" class="btn btn-filter-status btn-outline-primary" data-filter="tetap">
-                            <i class="fa fa-minus text-secondary me-1"></i> Tetap (11)
+                            Tetap (11)
                         </button>
                         <button type="button" class="btn btn-filter-status btn-outline-primary" data-filter="penurunan">
-                            <i class="fa fa-arrow-down text-danger me-1"></i> Penurunan (9)
+                            Penurunan (9)
                         </button>
                     </div>
                 </div>
                 <div class="col-md-5 d-flex gap-2">
                     <div class="input-group">
-                        <span class="input-group-text bg-white border-end-0"><i class="fa fa-search text-muted"></i></span>
-                        <input type="text" id="table-search-input" class="form-control border-start-0 ps-0" placeholder="Cari nama kabupaten atau kota...">
+                        <input type="text" id="table-search-input" class="form-control ps-3" placeholder="Cari nama kabupaten atau kota...">
                     </div>
                     <button class="btn btn-outline-success text-nowrap" id="btn-export-csv" title="Unduh Tabel Data CSV">
-                        <i class="fa fa-file-csv me-1"></i> Unduh CSV
+                        Unduh CSV
                     </button>
                 </div>
-            </div>
-
-            <!-- Tip Klik Baris -->
-            <div class="d-flex justify-content-between align-items-center mb-2 px-1 text-muted small">
-                <span><i class="fa fa-mouse-pointer text-primary me-1"></i> <strong>Tips Interaktif:</strong> Klik baris kabupaten/kota mana pun untuk melihat analisis spasial &amp; catatan topografi wilayah.</span>
-                <span class="text-primary fw-semibold"><i class="fa fa-info-circle me-1"></i> 35 Kabupaten/Kota</span>
             </div>
 
             <!-- Tabel Data -->
@@ -546,7 +509,7 @@
                             </tr>
                             <tr id="table-no-data" style="display: none;">
                                 <td colspan="6" class="text-center py-4 text-muted">
-                                    <i class="fa fa-search me-2 text-primary"></i>Tidak ditemukan kabupaten/kota yang sesuai dengan kriteria pencarian Anda.
+                                    Tidak ditemukan kabupaten/kota yang sesuai dengan kriteria pencarian Anda.
                                 </td>
                             </tr>
                         </tbody>
@@ -571,17 +534,13 @@
     <!-- Interactive Data Table Section End -->
 
 
-    <!-- Key Metrics / Fact Counter Start (2-Tier Balanced Grid) -->
-    <div class="container-xxl py-4">
+    <!-- Key Metrics / Fact Counter Start -->
+    <div id="metrik-section" class="container-xxl py-4">
         <div class="container">
-            <!-- Tier 1: Agregat Provinsi Jawa Tengah -->
-            <div class="row g-4 mb-4">
+            <div class="row g-4">
                 <!-- Metrik 1: Total Desa 4G/5G 2025 -->
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="metric-card-modern border-accent-primary h-100 d-flex align-items-center p-4">
-                        <div class="metric-icon-box bg-primary bg-opacity-10 text-primary me-4">
-                            <i class="fa fa-signal"></i>
-                        </div>
                         <div class="flex-grow-1">
                             <div class="d-flex justify-content-between align-items-baseline mb-1">
                                 <span class="metric-label mb-0">Total Desa/Kelurahan Bersinyal 4G/5G (2025)</span>
@@ -589,7 +548,7 @@
                             </div>
                             <div class="metric-val-large text-dark mb-1">8.333 <span class="fs-6 fw-normal text-muted">Desa</span></div>
                             <div class="text-muted small">
-                                <i class="fa fa-arrow-up text-success me-1"></i> Meningkat dari <strong>8.316 desa</strong> pada tahun 2024
+                                Meningkat dari <strong>8.316 desa</strong> pada tahun 2024
                             </div>
                         </div>
                     </div>
@@ -598,9 +557,6 @@
                 <!-- Metrik 2: Pertumbuhan Agregat Bersih -->
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="metric-card-modern border-accent-success h-100 d-flex align-items-center p-4">
-                        <div class="metric-icon-box bg-success bg-opacity-10 text-success me-4">
-                            <i class="fa fa-chart-line"></i>
-                        </div>
                         <div class="flex-grow-1">
                             <div class="d-flex justify-content-between align-items-baseline mb-1">
                                 <span class="metric-label mb-0">Pertumbuhan Bersih Agregat Sinyal</span>
@@ -608,54 +564,9 @@
                             </div>
                             <div class="metric-val-large text-success mb-1">+17 <span class="fs-6 fw-normal text-muted">Desa Baru</span></div>
                             <div class="text-muted small">
-                                <i class="fa fa-check-circle text-success me-1"></i> Ekspansi jaringan aktif di wilayah barat dan selatan Jawa Tengah
+                                Ekspansi jaringan aktif di wilayah barat dan selatan Jawa Tengah
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tier 2: Tiga Tipologi Spasial Jawa Tengah (Grid 3 Simetris) -->
-            <div class="row g-4 text-center">
-                <!-- Tipologi 1: Peningkatan -->
-                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="metric-card-modern border-accent-peningkatan h-100 p-4">
-                        <div class="badge-peningkatan d-inline-block px-3 py-1 rounded-pill mb-3 fw-bold small">
-                            <i class="fa fa-arrow-up me-1"></i> Peningkatan (&Delta; &gt; 0)
-                        </div>
-                        <div class="metric-val-large text-peningkatan mb-1">15 <span class="fs-6 fw-normal text-muted">Daerah</span></div>
-                        <div class="fw-bold text-dark mb-2">42,86% dari Total Wilayah</div>
-                        <p class="text-secondary small mb-0">
-                            Penambahan tertinggi: <strong>Cilacap (+10)</strong>, <strong>Banjarnegara (+10)</strong>, serta Banyumas &amp; Pemalang (+7).
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Tipologi 2: Tetap / Stagnan -->
-                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="metric-card-modern border-accent-tetap h-100 p-4">
-                        <div class="badge-tetap d-inline-block px-3 py-1 rounded-pill mb-3 fw-bold small">
-                            <i class="fa fa-minus me-1"></i> Tetap (&Delta; = 0)
-                        </div>
-                        <div class="metric-val-large text-tetap mb-1">11 <span class="fs-6 fw-normal text-muted">Daerah</span></div>
-                        <div class="fw-bold text-dark mb-2">31,43% dari Total Wilayah</div>
-                        <p class="text-secondary small mb-0">
-                            Mencakup <strong>6 kota otonom 100% jenuh</strong> (Semarang, Solo, dll) serta 5 kabupaten stabil.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Tipologi 3: Penurunan Sinyal -->
-                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="metric-card-modern border-accent-penurunan h-100 p-4">
-                        <div class="badge-penurunan d-inline-block px-3 py-1 rounded-pill mb-3 fw-bold small">
-                            <i class="fa fa-arrow-down me-1"></i> Penurunan (&Delta; &lt; 0)
-                        </div>
-                        <div class="metric-val-large text-penurunan mb-1">9 <span class="fs-6 fw-normal text-muted">Kabupaten</span></div>
-                        <div class="fw-bold text-dark mb-2">25,71% dari Total Wilayah</div>
-                        <p class="text-secondary small mb-0">
-                            Pelemahan akibat kontur berbukit: <strong>Kendal (-18)</strong>, Temanggung (-6), dan Blora (-6).
-                        </p>
                     </div>
                 </div>
             </div>
@@ -665,13 +576,13 @@
 
 
     <!-- 3 Tipologi Wilayah Highlight Start -->
-    <div class="container-xxl py-5">
+    <div id="tipologi-section" class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto mb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 760px;">
-                <span class="section-kicker"><i class="fa fa-chart-pie me-1"></i> Pola Spasial Infrastruktur</span>
+                <span class="section-kicker"><span class="section-index">03</span>Pola Spasial Infrastruktur</span>
                 <h2 class="display-6 fw-bold text-dark">Tiga Tipologi Karakteristik Wilayah Jawa Tengah</h2>
                 <p class="text-secondary small mb-0">
-                    Berdasarkan pola spasial pada peta perubahan, wilayah Jawa Tengah terbagi menjadi tiga tipologi karakteristik ketersediaan infrastruktur jaringan:
+                    Pola spasial pada peta perubahan membagi Jawa Tengah menjadi tiga tipologi ketersediaan infrastruktur jaringan:
                 </p>
             </div>
 
@@ -679,20 +590,15 @@
                 <!-- Tipologi 1: Peningkatan -->
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="callout-card callout-peningkatan h-100 p-4 shadow-sm">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="badge-peningkatan p-2 rounded-circle me-3" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
-                                <i class="fa fa-arrow-up"></i>
-                            </div>
-                            <div>
-                                <h5 class="fw-bold text-dark mb-0">Tipologi Peningkatan</h5>
-                                <small class="text-peningkatan fw-bold">15 Kabupaten/Kota (42,9%)</small>
-                            </div>
+                        <div class="mb-3">
+                            <h5 class="fw-bold text-dark mb-1">Tipologi Peningkatan</h5>
+                            <small class="text-peningkatan fw-bold">15 Kabupaten/Kota (42,9%)</small>
                         </div>
                         <p class="text-secondary small mb-3 leading-normal">
                             Penambahan terbesar terkonsentrasi di wilayah barat dan selatan Jawa Tengah: <strong>Cilacap (+10 desa)</strong>, <strong>Banjarnegara (+10)</strong>, serta <strong>Banyumas &amp; Pemalang (masing-masing +7)</strong>.
                         </p>
                         <div class="bg-white border p-3 rounded-2 small text-muted">
-                            <i class="fa fa-check text-success me-1"></i> Menunjukkan ekspansi jaringan telekomunikasi aktif di daerah yang sebelumnya memiliki ruang perluasan layanan.
+                            Menunjukkan ekspansi jaringan telekomunikasi aktif di daerah yang sebelumnya memiliki ruang perluasan layanan.
                         </div>
                     </div>
                 </div>
@@ -700,20 +606,15 @@
                 <!-- Tipologi 2: Tetap / Stagnan -->
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="callout-card callout-tetap h-100 p-4 shadow-sm">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="badge-tetap p-2 rounded-circle me-3" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
-                                <i class="fa fa-check-double"></i>
-                            </div>
-                            <div>
-                                <h5 class="fw-bold text-dark mb-0">Tipologi Tetap / Stabil</h5>
-                                <small class="text-tetap fw-bold">11 Kabupaten/Kota (31,4%)</small>
-                            </div>
+                        <div class="mb-3">
+                            <h5 class="fw-bold text-dark mb-1">Tipologi Tetap / Stabil</h5>
+                            <small class="text-tetap fw-bold">11 Kabupaten/Kota (31,4%)</small>
                         </div>
                         <p class="text-secondary small mb-3 leading-normal">
                             Mencakup <strong>6 kota otonom</strong> yang telah berada pada <strong>kondisi jenuh (cakupan 100%)</strong>: Kota Semarang, Surakarta, Salatiga, Magelang, Pekalongan, dan Tegal. Serta 5 kabupaten yang stabil.
                         </p>
                         <div class="bg-white border p-3 rounded-2 small text-muted">
-                            <i class="fa fa-info-circle text-secondary me-1"></i> Stagnasi pada kota wajar karena sinyal penuh, sedangkan pada kabupaten perlu evaluasi investasi baru.
+                            Stagnasi pada kota wajar karena sinyal penuh, sedangkan pada kabupaten perlu evaluasi investasi baru.
                         </div>
                     </div>
                 </div>
@@ -721,20 +622,15 @@
                 <!-- Tipologi 3: Penurunan & Kasus Kendal -->
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="callout-card callout-penurunan h-100 p-4 shadow-sm">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="badge-penurunan p-2 rounded-circle me-3" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
-                                <i class="fa fa-arrow-down"></i>
-                            </div>
-                            <div>
-                                <h5 class="fw-bold text-dark mb-0">Tipologi Penurunan Sinyal</h5>
-                                <small class="text-penurunan fw-bold">9 Kabupaten (25,7%)</small>
-                            </div>
+                        <div class="mb-3">
+                            <h5 class="fw-bold text-dark mb-1">Tipologi Penurunan Sinyal</h5>
+                            <small class="text-penurunan fw-bold">9 Kabupaten (25,7%)</small>
                         </div>
                         <p class="text-secondary small mb-3 leading-normal">
                             Penurunan terbanyak pada <strong>Kendal (-18 desa)</strong>, <strong>Temanggung (-6)</strong>, dan <strong>Blora (-6)</strong>. Penurunan ini akibat sinyal melemah terhalang kontur alam perbukitan saat pendataan.
                         </p>
                         <div class="bg-white border p-3 rounded-2 small text-muted">
-                            <i class="fa fa-exclamation-triangle text-danger me-1"></i> Bukti Kendal: Desa 4G turun 18 desa, namun desa sinyal lambat (2.5G/EDGE) melonjak dari 0 ke 20 desa di 2025.
+                            Bukti Kendal: Desa 4G turun 18 desa, namun desa sinyal lambat (2.5G/EDGE) melonjak dari 0 ke 20 desa di 2025.
                         </div>
                     </div>
                 </div>
@@ -743,7 +639,7 @@
             <!-- CTA Menuju Halaman Analisis Lengkap -->
             <div class="text-center mt-4">
                 <a href="analisis.html" class="btn btn-primary py-2 px-4 shadow-sm" style="font-size: 0.88rem; font-weight: 600;">
-                    <i class="fa fa-book-reader me-2"></i>Baca Analisis Lengkap Dinamika Spasial
+                    Baca Analisis Lengkap Dinamika Spasial
                 </a>
             </div>
         </div>
@@ -752,19 +648,18 @@
 
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s" style="border-top: 3px solid #0066FF;">
+    <div id="site-footer" class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-4 justify-content-between">
                 <!-- Kolom 1: Identitas Riset & Brand -->
                 <div class="col-lg-5 col-md-12">
                     <h4 class="text-white mb-3">
-                        <i class="fa fa-broadcast-tower text-primary me-2"></i>GeoSignal Jateng
+                        GeoSignal Jateng
                     </h4>
                     <p class="small text-secondary mb-3 leading-relaxed">
-                        Sistem Informasi Geografis berbasis web untuk analisis dan visualisasi spasial dinamika ketersediaan sinyal telekomunikasi seluler 4G/5G tingkat desa/kelurahan di 35 kabupaten/kota Provinsi Jawa Tengah.
+                        Visualisasi spasial ketersediaan sinyal 4G/5G tingkat desa di 35 kabupaten/kota Jawa Tengah, disusun dari data BPS 2024&ndash;2025.
                     </p>
                     <div class="d-inline-flex align-items-center px-0 py-1 text-muted small">
-                        <i class="fa fa-graduation-cap text-primary me-2 fs-6"></i>
                         <span>Program Studi Teknik Informatika &bull; FTI UPGRIS</span>
                     </div>
                 </div>
@@ -774,19 +669,15 @@
                     <h5 class="text-light mb-3">Data &amp; Spesifikasi Spasial</h5>
                     <ul class="list-unstyled small text-secondary mb-0">
                         <li class="mb-2">
-                            <i class="fa fa-database text-primary me-2"></i>
                             <strong>Data Sekunder:</strong> BPS Provinsi Jawa Tengah (2024–2025)
                         </li>
                         <li class="mb-2">
-                            <i class="fa fa-map text-primary me-2"></i>
                             <strong>Cakupan Spasial:</strong> 35 Kabupaten/Kota (8.562 Desa)
                         </li>
                         <li class="mb-2">
-                            <i class="fa fa-layer-group text-primary me-2"></i>
                             <strong>Pemetaan &amp; GIS:</strong> Quantum GIS (qgis2web OpenLayers)
                         </li>
                         <li class="mb-0">
-                            <i class="fa fa-compass text-primary me-2"></i>
                             <strong>Referensi Koordinat:</strong> WGS 84 / UTM Zona 49S
                         </li>
                     </ul>
@@ -800,11 +691,10 @@
                         Peneliti Utama / Mahasiswa Teknik Informatika UPGRIS
                     </p>
                     <p class="small text-secondary mb-3">
-                        <i class="fa fa-envelope text-primary me-2"></i>
                         <a href="mailto:m.yusufaffandi76@gmail.com" class="text-secondary text-decoration-none">m.yusufaffandi76@gmail.com</a>
                     </p>
                     <a href="peta/index.html" target="_blank" class="btn btn-sm btn-outline-primary py-2 px-3">
-                        <i class="fa fa-external-link-alt me-1"></i> Buka Web GIS Layar Penuh
+                        Buka Web GIS Layar Penuh
                     </a>
                 </div>
             </div>
@@ -825,7 +715,7 @@
 
 
     <!-- Modal Detail Kabupaten/Kota (Spatial Inspector) -->
-    <div class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="detailModalLabel" aria-hidden="true">
+    <div class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="modal-region-name" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
                 <div class="modal-header bg-dark text-white p-4">
@@ -860,7 +750,7 @@
 
                     <!-- Catatan Analisis Spasial & Topografi -->
                     <div class="card border-0 bg-white p-3 rounded-3 shadow-sm">
-                        <h6 class="fw-bold text-dark mb-2"><i class="fa fa-info-circle text-primary me-2"></i>Catatan Analisis Spasial &amp; Topografi:</h6>
+                        <h6 class="fw-bold text-dark mb-2">Catatan Analisis Spasial &amp; Topografi:</h6>
                         <p class="small text-secondary mb-0 leading-relaxed" id="modal-spatial-notes">
                             Memuat analisis spasial...
                         </p>
@@ -880,7 +770,7 @@
             <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
                 <div class="modal-header bg-dark text-white p-3">
                     <h5 class="modal-title fw-bold" id="mapZoomModalLabel">
-                        <i class="fa fa-map text-primary me-2"></i>Gambar 2. Peta Dinamika Perubahan Sinyal 4G/5G Jawa Tengah (2024–2025)
+                        Gambar 2. Peta Dinamika Perubahan Sinyal 4G/5G Jawa Tengah (2024–2025)
                     </h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
